@@ -6,6 +6,7 @@ import SearchFeed from "./SearchFeed"
 import SearchBar from "./SearchBar"
 import Sidebar from "./Sidebar"
 import Videos from "./Videos"
+import VideoCard from "./VideoCard"
 
 
-export {Feed, VideoDetail, ChannelDetail, Navbar, SearchFeed, SearchBar, Sidebar, Videos}
+export {Feed, VideoDetail, ChannelDetail, Navbar, VideoCard, SearchFeed, SearchBar, Sidebar, Videos}
