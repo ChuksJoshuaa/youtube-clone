@@ -5,7 +5,7 @@ import { CheckCircle } from "@mui/icons-material"
 
 import { demoThumbnailUrl, demoVideoUrl, demoVideoTitle, demoChannelUrl, demoChannelTitle } from '../utils/contants'
 
-const VideoCard = ({ video: { id: videoId }, snippet }) => {
+const VideoCard = ({ video: { id: videoId, snippet } }) => {
       
     return (
     <Card>
