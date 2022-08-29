@@ -7,8 +7,13 @@ import { demoProfilePicture } from '../utils/contants'
 
 const ChannelCard = ({ channelDetail }) => {
   return (
-    <Box sx={{ borderRadius: "20px", boxShadow: "none"}}>
-       <Link to={`/channel/${channelDetail?.id?.channelId}`}>
+    <Box 
+      sx={{borderRadius: "20px", boxShadow: "none", alignItems: "center",
+        display: "flex", justifyContent: "center", height: "365px",
+        width: { xs: "356px", md: "320px"},  margin: "auto"}}
+      >
+      <Link to={`/channel/${channelDetail?.id?.channelId}`}
+    >
          <CardContent sx={{ display: "flex", flexDirection: "column", justifyContent: "center", textAlign: "center", color: "#fff"}}>
             <CardMedia
             image={channelDetail?.snippet?.thumbnails?.high?.url || demoProfilePicture}
@@ -22,7 +27,11 @@ const ChannelCard = ({ channelDetail }) => {
               sx={{ fontSize: 14, color: "gray", ml: "5px"}}
               />
             </Typography>
-           
+           {channelDetail?.statistics?.subscriberCount && (
+              <Typography>
+                  {parseInt(channelDetail?.statistics?.subscriberCount).toLocaleString()} Subscribers
+              </Typography>
+            )}
          </CardContent>
        </Link>
     </Box>
