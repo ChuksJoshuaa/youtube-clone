@@ -20,7 +20,7 @@ const VideoDetail = () => {
   }, [id])
 
   if(!videoDetail?.snippet) return <div>Loading....</div>
-  if(!videos) return <div>Loading....</div>
+  if(!videos?.length) return <div>Loading....</div>
 
   const { snippet: { title, channelId, channelTitle }, statistics: { viewCount, likeCount } } = videoDetail
 
