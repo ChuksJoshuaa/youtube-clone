@@ -15,7 +15,6 @@ const VideoDetail = () => {
    .then((data) => setVideoDetail(data?.items[0]))
   }, [])
 
-  console.log(videoDetail)
   return (
     <Box minHeight="95vh">
       <Stack direction={{ xs: "column", md: "row" }}>
